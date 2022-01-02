@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
+import { Container, Input, Button, Img, Text } from './styles'
 
 export default function MainPage() {
     const [user, setUser] = useState({});
@@ -22,17 +23,18 @@ export default function MainPage() {
 
     return (
         <div>
+            <Container>
+                <div>
+                    <Input type="text" value={input} onChange={handleChange} />
 
+                    <Button onClick={handleSubmit} > Pesquisar usuário</Button>
+                </div>
+                <Img src={user.avatar_url} />
+                <Text> Nome: {user.name}</Text>
+                <Text> Login: {user.login}</Text>
+                <Text> Localidade: {user.location}</Text>
 
-            Nome:
-            <input type="text" value={input} onChange={handleChange} />
-
-            <button width="120" height="90" onClick={handleSubmit} />
-
-            <img src={user.avatar_url} />
-            {user.name}
-            {user.login}
-            {user.location}
+            </Container>
         </div>
     )
 }
