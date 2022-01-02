@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Text, ImgContainer, Img, Repo, RepoContainer, Container, InfoContainer } from './styles'
 import api from '../../services/api'
 
+
+function ConverterData(dataInput){
+    var data = new Date(dataInput);
+    var dataFormatada = data.toLocaleDateString('pt-BR');
+    return dataFormatada
+}
 export default function Infos({ props }) {
     const [repos, setRepos] = useState([]);
 
@@ -31,8 +37,8 @@ export default function Infos({ props }) {
                         <Text>Nome: {repo?.name}</Text>
                         <Text>Linguagem: {repo?.language}</Text>
                         <Text>Descrição: {repo?.description}</Text>
-                        <Text>Criação: {repo?.created_at}</Text>
-                        <Text>Último push: {repo?.pushed_at}</Text>
+                        <Text>Criação: {ConverterData(repo?.created_at)}</Text>
+                        <Text>Último push: {ConverterData(repo?.pushed_at)}</Text>
                     </Repo>
                 ))}
             </RepoContainer>
