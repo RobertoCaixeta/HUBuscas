@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
+export const Background = styled.div`
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #6c7775; 
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #d5e1df;
-  width: 25%;
+  width: 35%;
   border-radius: 10px;
   margin-top: 6vh;
   padding: 0.5em;
@@ -41,11 +50,16 @@ export const Img = styled.img`
   margin: 1em;
 `
 
+export const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`
+
 export const Text= styled.h1`
   font-family: 'Lato', sans-serif;
   width: 100%;
   text-align: center;
   font-size 22px;
   color: #696969;
-
 `
