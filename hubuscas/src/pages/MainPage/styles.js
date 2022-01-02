@@ -12,6 +12,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #d5e1df;
   width: 35%;
   border-radius: 10px;

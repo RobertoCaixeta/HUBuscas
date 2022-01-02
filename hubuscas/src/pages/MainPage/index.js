@@ -12,6 +12,8 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
+        backgroundColor: '#d5e1df',
+
     },
 };
 
@@ -55,7 +57,7 @@ export default function MainPage() {
                 ariaHideApp={false}
             >
                 <Infos props={user} />
-                <button onClick={closeModal}>close</button>
+                <Button onClick={closeModal}>Fechar Perfil</Button>
 
             </Modal>
             <Container>
@@ -64,13 +66,12 @@ export default function MainPage() {
 
                     <Button onClick={handleSubmit} > Pesquisar usuário</Button>
                 </div>
-
                 <ImgContainer>
                     <Img onClick={openModal} src={user.avatar_url} />
                 </ImgContainer>
                 <Text> Nome: {user.name}</Text>
                 <Text> Login: {user.login}</Text>
-                <Text> Localidade: {user.location}</Text>
+                <Text> Localização: {user.location}</Text>
 
             </Container>
         </Background>
