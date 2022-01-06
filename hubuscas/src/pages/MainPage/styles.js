@@ -44,8 +44,8 @@ export const Button = styled.button`
 `;
 
 export const Img = styled.img`
-  width: 400px;
-  height: 400px;
+  width: ${props => props.size};
+  height: ${props => props.size};
   border-radius: 50%;
   border: 8px solid #FFF;
   margin: 1em;
@@ -63,4 +63,22 @@ export const Text= styled.h1`
   text-align: center;
   font-size 22px;
   color: #696969;
+`
+export const User = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80rem;
+    border: 2px solid #808080;
+    height: 15rem;
+
+`
+export const UserContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid #808080;
+    height:400px;
+    overflow: scroll;
+
 `
